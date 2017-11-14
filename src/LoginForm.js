@@ -39,7 +39,7 @@ class LoginForm extends Component {
 			.auth()
 			.signInWithEmailAndPassword(email, password)
 			.then(async ({ navigation }) => {
-				Alert.alert('Berhasil Login');
+				// Alert.alert('Berhasil Login', '');
 				this.setState({ error: '', loading: false });
 				AsyncStorage.setItem('currentEmail', email);
 				const value = await AsyncStorage.getItem('currentEmail');
@@ -47,7 +47,7 @@ class LoginForm extends Component {
 				Keyboard.dismiss();
 			})
 			.catch(() => {
-				Alert.alert('Gagal Login');
+				Alert.alert('Gagal Login', 'Email atau password tidak dapat dikenali');
 				this.setState({ error: 'Authentication failed.', loading: false });
 			});
 	}
