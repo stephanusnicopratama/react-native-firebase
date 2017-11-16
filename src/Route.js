@@ -1,34 +1,38 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, TouchableOpacity  } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import IOSIcon from "react-native-vector-icons/Ionicons";
 
 // import component
 import LoginForm from './LoginForm';
 import Register from './Register';
-import Home from './Home';
+import homeDrawer from './app/AppRoute';
 
-export const RootNavigator = StackNavigator({
+const RootNavigator = StackNavigator({
 	Login: {
 		screen: LoginForm,
 		navigationOptions: {
-      header: null,
+			header: null
 		}
 	},
 	Register: {
 		screen: Register,
-    path: 'register',
+		path: 'register',
 		navigationOptions: {
 			headerTitle: 'Register'
 		}
 	},
 	Home: {
-		screen: Home,
-		navigationOptions: {
-			header: null,
-		}
+		screen: homeDrawer,
+		navigationOptions: ({ navigation }) => ({
+			headerLeft: (
+				<TouchableOpacity onPress={() => navigation.navigate('DrawerOpen')}>
+					<IOSIcon name="ios-menu" size={30} />
+				</TouchableOpacity>
+			),
+			headerStyle: { paddingRight: 10, paddingLeft: 10 }
+		})
 	}
 });
-
-
 
 export default RootNavigator;

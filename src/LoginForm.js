@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
 class LoginForm extends Component {
 	state = { email: '', password: '', loading: false };
 
+	constructor(props) {
+		super(props);
+	}
+
 	onLoginPress() {
 		AsyncStorage.clear();
 		this.setState({ error: '', loading: true });

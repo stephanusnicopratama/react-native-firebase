@@ -7,7 +7,9 @@ import {
 	StyleSheet,
 	TextInput,
 	Alert,
-	ActivityIndicator
+	ActivityIndicator,
+	Button,
+	SectionList
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import firebase from 'firebase';
@@ -37,14 +39,12 @@ export default class Register extends Component {
 		}
 		return (
 			<View style={styles.loginContainer}>
-				<Icon.Button
-					name="long-arrow-right"
+				<Button
+					title="Register"
 					backgroundColor="#3b5998"
 					onPress={this.register.bind(this)}
 					style={{ height: 50 }}
-				>
-					<Text style={{ fontFamily: 'Arial', fontSize: 15 }}>Register</Text>
-				</Icon.Button>
+				/>
 			</View>
 		);
 	}
@@ -53,7 +53,7 @@ export default class Register extends Component {
 		return (
 			<View style={styles.container}>
 				<View>
-					<View>
+					<View style={styles.ViewList}>
 						<Text style={styles.titleText}>E-mail</Text>
 						<TextInput
 							label="email"
@@ -62,7 +62,7 @@ export default class Register extends Component {
 							onChangeText={email => this.setState({ email })}
 						/>
 					</View>
-					<View>
+					<View style={styles.ViewList}>
 						<Text style={styles.titleText}>Password</Text>
 						<TextInput
 							label="email"
@@ -90,6 +90,10 @@ const styles = StyleSheet.create({
 		justifyContent: 'flex-end',
 		bottom: 0,
 		height: 100
+	},
+	ViewList: {
+		paddingHorizontal: 20,
+		paddingVertical: 10
 	},
 	titleText: {
 		fontSize: 20,
