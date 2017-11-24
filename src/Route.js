@@ -25,14 +25,16 @@ const RootNavigator = StackNavigator({
 	Home: {
 		screen: homeDrawer,
 		navigationOptions: ({ navigation }) => ({
-			headerLeft: (
-				<TouchableOpacity onPress={() => navigation.navigate('DrawerOpen')}>
-					<IOSIcon name="ios-menu" size={30} />
-				</TouchableOpacity>
-			),
-			headerStyle: { paddingRight: 10, paddingLeft: 10 }
-		})
+				headerLeft: (
+					<TouchableOpacity onPress={() => navigation.navigate('DrawerOpen')}>
+						<IOSIcon name="ios-menu" size={30} />
+					</TouchableOpacity>
+				),
+				headerStyle: { paddingRight: 10, paddingLeft: 10 }
+			})
 	}
 });
 
 export default RootNavigator;
+
+{/* <IOSIcon name="ios-menu" size={30} /> */}

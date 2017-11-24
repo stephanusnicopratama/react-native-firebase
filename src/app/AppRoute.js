@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Button, AsyncStorage } from 'react-native';
 import { DrawerNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import firebase from 'firebase';
 
 // import component
 import Jadwal from './jadwal/Jadwal';
@@ -9,7 +10,7 @@ import User from './user/User';
 import Home from './home/Home';
 
 const logout = ({ navigation }) => (
-	AsyncStorage.clear(), navigation.navigate('Login')
+	firebase.auth().signOut(), AsyncStorage.clear(), navigation.navigate('Login')
 );
 
 const homeDrawer = DrawerNavigator({

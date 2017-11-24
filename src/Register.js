@@ -11,7 +11,7 @@ import {
 	Button,
 	SectionList
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import firebase from 'firebase';
 
 export default class Register extends Component {
