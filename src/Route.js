@@ -36,5 +36,3 @@ const RootNavigator = StackNavigator({
 });
 
 export default RootNavigator;
-
-{/* <IOSIcon name="ios-menu" size={30} /> */}

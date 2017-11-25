@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "436842026148",
+    "firebase_url": "https://saving-smi.firebaseio.com",
+    "project_id": "saving-smi",
+    "storage_bucket": "saving-smi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436842026148:android:b754fae0b77e825f",
+        "android_client_info": {
+          "package_name": "com.reactnativestormpath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436842026148-45ro252eor3uga7qgagmps79u087o9km.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByO9lglwiKuJF_Lsje01PPHRA5sUldHGU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

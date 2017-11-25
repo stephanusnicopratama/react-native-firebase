@@ -74,6 +74,7 @@ class LoginForm extends Component {
 				<TextInput
 					label="Email Address"
 					placeholder="you@domain.com"
+					autoCapitalize="none"
 					value={this.state.email}
 					onChangeText={email => this.setState({ email })}
 				/>
@@ -81,6 +82,7 @@ class LoginForm extends Component {
 					label="Password"
 					autoCorrect={false}
 					placeholder="*******"
+					autoCapitalize="none"
 					secureTextEntry
 					value={this.state.password}
 					onChangeText={password => this.setState({ password })}
